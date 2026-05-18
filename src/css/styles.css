@@ -1,0 +1,463 @@
+/* ========== Schrift ========== */
+
+@import url("./fonts.css");
+
+body {
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+/* ========= Color ==========
+#4e8754 -----> BTN 
+
+#1F3D2B;      dunkles Waldgrün
+#3F7D4A;      natürliches Grün
+#DDEEDC;      helles Grün
+#A8C66C;      weicher Akzent
+#F6FAF4;      sehr heller Hintergrund
+#1E1E1E;      Textfarbe
+*/
+
+/* ========= Global ========= */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ========= Generelles ========== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+/* ========= Navigation ========= */
+.nav-leiste {
+    background-color: #4e8754;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #3b8943;
+}
+
+.nav-leiste > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    height: 60px;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-leiste > ul > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-leiste > ul > li > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-leiste > ul > li > a:link {
+    color: #000;
+}
+
+.nav-leiste > ul > li > a:visited  {
+    color: #000;
+}
+
+.nav-leiste > ul > li > a:hover {
+    color: #FFF;
+}
+
+.nav-leiste > ul > li > a:active {
+    color: #000;
+}
+
+#active {
+    background-color: #10300367;
+    height: 61px;
+    padding: 0 1rem;
+}
+
+@media (max-width: 456px) {
+    .nav-leiste ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        justify-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-leiste li {
+        list-style: none;
+    }
+
+    .nav-leiste a {
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== Header ========== */
+
+#hero {
+    background-image: url(../img/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1200px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 40rem;
+}
+
+#hero > p {
+    display: inline-block;
+    color: #000;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 500px;
+}
+
+#hero > h1 {
+    font-size: 2.8rem;
+    color: #1f4f2b;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.2;
+}
+
+#hero > a {
+    color: #000;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background-color: #4e8754;
+    text-decoration: none;
+    margin-left: 80px;
+
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#hero > a:hover,
+#hero > a:focus-visible {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+@media(max-width: 1440px) {
+    #hero {
+        background-position: right;
+    }
+}
+
+@media(max-width: 1024px) {
+    #hero {
+        height: auto;
+        background-image: none;
+        padding-bottom: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+    #hero > a {
+        margin: 0 auto;
+    }
+    #hero > h1 {
+        font-size: 2rem;
+        padding: 2%;
+    }
+    #hero > p {
+        width: auto;
+        padding: 0 10%;
+    }
+}
+
+/* ======= Leistungs-Verlinkungs-Bereich */
+
+#leistungenSeite1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #DDEEDC;
+    text-align: center;
+    padding: 2rem;
+}
+
+#leistungenSeite1 > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#leistungenSeite1 > div > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#leistungenSeite1 > div > article > img {
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: .8rem;
+}
+
+#leistungenSeite1 > div > article > a {
+    text-align: center;
+    color: #1E1E1E;
+    width: 80%;
+    border-radius: 20px;
+    padding: 8px 10px;
+    background-color: #4e8754;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+}
+
+#leistungenSeite1 > div > article > a:hover,
+#leistungenSeite1 > div > article > a:focus-visible {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+@media(max-width: 1024px) {
+    #leistungenSeite1 > div {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 680px) {
+    #leistungenSeite1 > div {
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 360px) {
+    #leistungenSeite1 > div > article > img {
+        width: 200px;
+    }
+}
+
+/* ========= Ueber Mich ========= */
+
+#ueber-mich {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    scroll-margin-top: 100px;
+}
+
+#ueber-mich > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ueber-mich > article > h2 {
+    text-align: center;
+}
+
+#ueber-mich > article > p {
+    padding: 0 30%;
+}
+
+.qualifikation-badge {
+    background-color: #4e8754e5;
+    border-radius: 20px;
+    color: #1E1E1E;
+    padding: 0 .3rem;
+}
+
+#zertifikat {
+    width: 450px;
+}
+
+@media(max-width: 450px) {
+    #zertifikat {
+        width: 300px;
+    }
+    #ueber-mich > article > p {
+        padding: 0 25%
+    }
+}
+
+
+
+
+/* ========= Kontakt ========= */
+
+#kontakt-background {
+    background-color: #DDEEDC;
+    padding: 2rem 0;
+}
+
+#kontakt {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.kontakt-header {
+    max-width: 700px;
+}
+
+.kontaktmoeglichkeiten {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.kontakt-option {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kontakt-link-style {
+    text-decoration: none;
+}
+
+.kontakt-link-style:link {
+    color: #000;
+}
+
+.kontakt-link-style:visited {
+    color: #000;
+}
+
+.kontakt-link-style:hover {
+    color: #FFF;
+}
+
+.kontakt-link-style:active {
+color: #000;
+}
+
+.kontakt-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kontakt-option address {
+    font-style: normal;
+}
+
+#kontakt-btn {
+    display: inline-block;
+    color: #000;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background-color: #4e8754;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+}
+
+#kontakt-btn:hover,
+#kontakt-btn:focus-visible {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+#email-btn {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media(max-width: 510px) {
+    .kontaktmoeglichkeiten {
+        flex-direction: column;
+    }
+}
+
+
+/* ========= Leistungen Seite 2 ========= */
+
+#leistungen-hero {
+    background-color: #DDEEDC;
+    padding: 5rem 0 3rem;
+}
+
+.leistungen-hero-content {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.leistungen-hero-content h1 {
+    font-size: 2.5rem;
+    color: #1f4f2b;
+    margin-bottom: 1rem;
+}
+
+.leistungen-hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #222;
+}
+
+/* ========== FOOTER ========= */
+
+.footer {
+    background-color: #4e8754;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.footer > a {
+    margin: 0 10px;
+}
+
+.footer > a:link {
+    color: #000;
+}
+
+.footer > a:visited {
+    color: #000;
+}
+
+.footer > a:hover {
+    color: #FFF;
+}
+
+.footer > a:active {
+color: #000;
+}
