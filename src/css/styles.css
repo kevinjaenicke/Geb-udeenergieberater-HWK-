@@ -97,22 +97,8 @@ body {
 }
 
 @media (max-width: 456px) {
-    .nav-leiste ul {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
-        justify-items: center;
-        width: 100%;
-        height: auto;
-    }
-
-    .nav-leiste li {
-        list-style: none;
-    }
-
-    .nav-leiste a {
-        white-space: nowrap;
-        font-size: 0.9rem;
+    .displayoff {
+        display: none !important;;
     }
 }
 
