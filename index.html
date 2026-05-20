@@ -12,7 +12,7 @@
     <!-- ========= Navigation ========= -->
 
     <nav class="nav-leiste">
-        <ul>
+        <ul class="nav-container">
             <li id="logo"><a href="">
                     <img src="" alt="">
                 </a>
@@ -21,7 +21,6 @@
             <li><a href="leistungen.html">Leistungen</a></li>
             <li class="displayoff"><a href="#ueber-mich">Über mich</a></li>
             <li class="displayoff"><a href="#kontakt">Kontakt</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
         </ul>
     </nav>
 
@@ -38,10 +37,10 @@
 
     <main>
 
-        <section id="leistungenSeite1">
+        <section id="leistungen-vorschau">
             <h2>Meine Leistungen</h2>
             <p>Umfassende Energieberatung für Ihr Gebäude — unabhängig, kompetent und förderfähig.</p>
-            <div>
+            <div id="leistung-grid">
                 <article>
                     <img src="./src/img/BEG-Einzelmassnahmen.png" alt="Verlinkung zum BEG-Einzelmassnahmen">
                     <a href="">BEG Einzelmaßnahmen</a>
@@ -74,7 +73,7 @@
 
         <section id="ueber-mich">
 
-            <article>
+            <article id="ueber-mich-container">
                 <h2>Über mich</h2>
 
                 <p>Als Gebäudeenergieberater (HWK) unterstütze ich Sie kompetent bei allen Fragen rund um die
@@ -93,8 +92,8 @@
         </section>
 
 <!-- ========== Kontakt aufnehmen ========= -->
-<section id="kontakt-background">
-    <div id="kontakt">
+<section id="kontakt">
+    <div id="kontakt-container">
         <header class="kontakt-header">
             <h2>Kontakt aufnehmen</h2>
             <p>
@@ -141,7 +140,7 @@
 
     <footer class="footer">
         <p>© 2026 Merlin Lohmann · Gebäudeenergieberater (HWK) · Alle Rechte vorbehalten</p>
-        <a href="">Impressum</a>
+        <a href="impressum.html">Impressum</a>
     </footer>
 
 </body>

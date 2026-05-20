@@ -41,98 +41,99 @@ body {
 
 /* ========= Navigation ========= */
 .nav-leiste {
-    background-color: #4e8754;
-    position: sticky;
-    top: 0;
     display: flex;
     justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    background-color: #4e8754;
     border-bottom: 1px solid #3b8943;
 }
 
-.nav-leiste > ul {
+.nav-container {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 1rem;
-    height: 60px;
     align-items: center;
     gap: 20px;
+    height: 60px;
+    margin: 0;
+    padding: 1rem;
+    
 }
 
-.nav-leiste > ul > li {
+.nav-container > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+}
+
+.nav-container > li > a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav-leiste > ul > li > a {
+    height: 100%;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
 }
 
-.nav-leiste > ul > li > a:link {
+.nav-container > li > a:link {
     color: #000;
 }
 
-.nav-leiste > ul > li > a:visited  {
+.nav-container > li > a:visited  {
     color: #000;
 }
 
-.nav-leiste > ul > li > a:hover {
+.nav-container > li > a:hover {
     color: #FFF;
 }
 
-.nav-leiste > ul > li > a:active {
+.nav-container > li > a:active {
     color: #000;
 }
 
 #active {
-    background-color: #10300367;
     height: 61px;
     padding: 0 1rem;
+    background-color: #10300367;
 }
 
 @media (max-width: 456px) {
-    .displayoff {
-        display: none !important;;
+    .nav-container > li > a {
+        font-size: .9rem;
     }
 }
 
 /* ========== Header ========== */
 
 #hero {
-    background-image: url(../img/Hero.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 1200px;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    height: 1200px;
+    margin: 0;
     padding-bottom: 40rem;
+    background-image: url(../img/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #hero > p {
     display: inline-block;
-    color: #000;
+    width: 500px;
     padding-left: 5rem;
     padding-right: 5rem;
-    width: 500px;
+    color: #000;
 }
 
 #hero > h1 {
+    max-width: 600px;
     font-size: 2.8rem;
     color: #1f4f2b;
     padding-left: 5rem;
     padding-right: 5rem;
     margin: 0;
-    max-width: 600px;
     line-height: 1.2;
 }
 
@@ -163,10 +164,10 @@ body {
 @media(max-width: 1024px) {
     #hero {
         height: auto;
+                text-align: center;
+        align-items: center;
         background-image: none;
         padding-bottom: 2rem;
-        text-align: center;
-        align-items: center;
     }
     #hero > a {
         margin: 0 auto;
@@ -183,17 +184,17 @@ body {
 
 /* ======= Leistungs-Verlinkungs-Bereich */
 
-#leistungenSeite1 {
+#leistungen-vorschau {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
-    background-color: #DDEEDC;
     text-align: center;
+    margin: 0 auto;
     padding: 2rem;
+    background-color: #DDEEDC;
 }
 
-#leistungenSeite1 > div {
+#leistung-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -202,23 +203,23 @@ body {
     margin: 0 auto;
 }
 
-#leistungenSeite1 > div > article {
+#leistung-grid > article {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-#leistungenSeite1 > div > article > img {
+#leistung-grid > article > img {
     width: 300px;
     border-radius: 20px;
     margin-bottom: .8rem;
 }
 
-#leistungenSeite1 > div > article > a {
+#leistung-grid > article > a {
+    width: 80%;
     text-align: center;
     color: #1E1E1E;
-    width: 80%;
     border-radius: 20px;
     padding: 8px 10px;
     background-color: #4e8754;
@@ -226,26 +227,26 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease
 }
 
-#leistungenSeite1 > div > article > a:hover,
-#leistungenSeite1 > div > article > a:focus-visible {
+#leistung-grid > article > a:hover,
+#leistung-grid > article > a:focus-visible {
     transform: translateY(-3px) scale(1.04);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 @media(max-width: 1024px) {
-    #leistungenSeite1 > div {
+    #leistung-grid {
     grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(max-width: 680px) {
-    #leistungenSeite1 > div {
+    #leistung-grid {
     grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media(max-width: 360px) {
-    #leistungenSeite1 > div > article > img {
+    #leistung-grid > article > img {
         width: 200px;
     }
 }
@@ -259,25 +260,25 @@ body {
     scroll-margin-top: 100px;
 }
 
-#ueber-mich > article {
+#ueber-mich-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#ueber-mich > article > h2 {
+#ueber-mich-container > h2 {
     text-align: center;
 }
 
-#ueber-mich > article > p {
+#ueber-mich-container > p {
     padding: 0 20%;
 }
 
 .qualifikation-badge {
-    background-color: #4e8754e5;
-    border-radius: 20px;
     color: #1E1E1E;
     padding: 0 .3rem;
+    background-color: #4e8754e5;
+    border-radius: 20px;
 }
 
 #zertifikat {
@@ -288,7 +289,7 @@ body {
     #zertifikat {
         width: 300px;
     }
-    #ueber-mich > article > p {
+    #ueber-mich-container > p {
         padding: 0 25%;
     }
 }
@@ -298,20 +299,19 @@ body {
 
 /* ========= Kontakt ========= */
 
-#kontakt-background {
+#kontakt {
     background-color: #DDEEDC;
     padding: 2rem 0;
 }
 
-#kontakt {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-
+#kontakt-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .kontakt-header {
@@ -319,17 +319,15 @@ body {
 }
 
 .kontaktmoeglichkeiten {
-    width: 100%;
-
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    width: 100%;
 }
 
 .kontakt-option {
-    flex: 1;
-
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
